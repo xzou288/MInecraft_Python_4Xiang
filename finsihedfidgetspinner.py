@@ -1,10 +1,16 @@
+'''
+the code makes a fidget spinner dance floor, it switches between to lists very quick to
+make it look like it is spinning.'''
+
+
+
 from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
 
 import time
 
 pos = mc.player.getTilePos()
-x, y, z = pos.x, pos.y, pos.z
+x, y, z = pos.x, pos.y, pos.z   #gets player position
 
 blocks = [[42, 42, 42, 42, 42, 42, 57, 57, 42, 42, 42, 42, 42, 42],
           [42, 42, 42, 42, 42, 57, 57, 57, 57, 42, 42, 42, 42, 42],
@@ -35,7 +41,7 @@ block2 = [[42, 42, 57, 57, 42, 42, 42, 42, 42, 42, 57, 57, 42, 42],
           [42, 42, 42, 42, 42, 57, 57, 57, 57, 42, 42, 42, 42, 42],
           [42, 42, 42, 42, 42, 42, 57, 57, 42, 42, 42, 42, 42, 42]]
  
-
+#list of the blocks and makes floor for the fidget spinner 
 
 while True:
     for row in (blocks):
@@ -53,4 +59,7 @@ while True:
         z += 1
         x = pos.x
     z = pos.z
-    time.sleep(.6)
+    time.sleep(.6) #makes the fidget spinner change between both the lists and makes the illusion of it spinning(kinda).
+    
+
+# made by Alex Kary and Xiang Zou hr3 (March 13th 2018)
